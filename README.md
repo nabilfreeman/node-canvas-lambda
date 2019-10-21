@@ -60,8 +60,15 @@ Error: libuuid.so.1: cannot open shared object file: No such file or directory
     at Module.load (internal/modules/cjs/loader.js:600:32)
 ```
 
-If you compare `/usr/lib64` inside a Lambda function and cross-reference it with the Amazon AMI you'll find that there are 3 libraries missing in the Lambda environment. Here are the missing libraries which are packaged in `canvas-lib64-layer.zip`:
+If you compare `/usr/lib64` inside a Lambda function and cross-reference it with the Amazon AMI you'll find that there are some commonly used Canvas libraries missing in the Lambda environment. Here are the missing libraries which are packaged in `canvas-lib64-layer.zip`:
 
-	libblkid.so.1
-	libmount.so.1
 	libuuid.so.1
+	libpixman-1.so.0
+	libpangoft2-1.0.so.0
+	libjpeg.so.62
+	libmount.so.1
+	libpango-1.0.so.0
+	libpangocairo-1.0.so.0
+	libblkid.so.1
+	libcairo.so.2
+	libfreetype.so.6
